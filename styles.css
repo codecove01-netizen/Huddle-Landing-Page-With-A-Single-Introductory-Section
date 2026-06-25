@@ -1,0 +1,53 @@
+/* ==============================================================================
+        Frontend Mentor - Huddle Landing Page with Single Introductory Section
+        Author: Arati D'sa
+   =============================================================================== */
+
+/* =================================
+        CSS RESET
+   ================================= */   
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}   
+
+/* =================================
+        CUSTOM PROPERTIES
+   ================================= */  
+   :root {
+    /* Colors */
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+
+    /* Fonts Family */
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+
+    /* Fonts Size */
+    --fs-16: 1rem;
+
+    /* Fonts Weight */
+    --fw-400: 400;
+    --fw-600: 600;
+   }
+
+ /* =================================
+        GLOBAL STYLES
+   ================================= */    
+body{
+    font-family: var(--ff-open-sans);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-400);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =================================
+        LAYOUT STYLES
+   ================================= */  
