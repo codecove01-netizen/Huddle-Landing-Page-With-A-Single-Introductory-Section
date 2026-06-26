@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Frontend Mentor NFT Preview Card solution built with semantic HTML and CSS. 
-        Responsive design featuring Flexbox , Grid and fluid typography.">
+        Responsive design featuring Flexbox, Grid and fluid typography.">
     <title>Huddle Landing Page With A Single Introductory Section | Frontend Mentor</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png"/>
@@ -15,23 +15,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-   <main>
-    <header>
+   <main class="container">
+    <header class="logo-header">
         <img src="./images/logo.svg" alt="Huddle logo" class="logo">
     </header>
-    <section>
+    <section class="mockups-section">
         <img src="./images/illustration-mockups.svg" alt="Huddle mockups" class="mockups">
     </section>
     <section class="content">
-        <h1>Build The Community Your Fans Will Love</h1>
-        <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+        <h1 class="content-title">Build The Community Your Fans Will Love</h1>
+        <p class="content-descpt">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
             Create connections with your users as you engage in genuine discussion.</p>
-        <a href="#" class="btn">Register</a>
+        <a href="#" class="register-btn">Register</a>
     </section>
-    <section>
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
+    <section class="social-icons">
+        <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
     </section>
    </main>
    <footer>
