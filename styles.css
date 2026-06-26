@@ -58,18 +58,25 @@ body{
 /* =================================
         LAYOUT STYLES
    ================================= */  
+   /* MAIN CONTAINER */
    .container{
       padding-inline: 2.2rem;
    }
+
+   /* HEADER */
    .logo{
-      max-width:44%;
+      width:clamp(8rem,14vw,13.4rem);
    }
+
+   /* MOCKUP */
    .mockups-section{
       margin-block-start:3.4rem;
-   }
+   }   
    .mockups{
-      max-width:100%;
+      max-inline-size:100%;
    }
+
+   /* CONTENT */
    .content{
       margin-block-start:3.4rem;    
       text-align: center;    
@@ -84,6 +91,8 @@ body{
       margin-block-start:1rem;
       line-height: 1.5;
    }
+
+   /* REGISTER BUTTON */
    .register-btn{
       display: inline-block;
       margin-block-start: 1.5rem;
@@ -94,38 +103,37 @@ body{
       background-color: var(--white);
       color: var(--purple-700);
       font-weight: var(--fw-600);
+      font-family: var(--ff-poppins);
+      box-shadow: 0rem 0.5rem 0.5rem var(--purple-dark);
    }
    .register-btn:hover,
    .register-btn:focus-visible{
       background-color: var(--magenta-400);
-      color: var(--white);
-      box-shadow: 0rem 0.5rem 0.5rem var(--purple-dark);
+      color: var(--white);      
    }
-
    .register-btn:focus-visible,
    .social-icons a:focus-visible,
    footer a:focus-visible{
-      outline: 2px solid var(--magenta-dark);
+      outline: 0.13rem solid var(--magenta-dark);
       outline-offset: 0;
    }
 
+   /* SOCIAL ICONS */
    .social-icons{
       display:flex;
       justify-content:center;
       gap:0.5rem;
       margin-block-start:4.2rem;
    }
-
    .social-icons a{
       width:1.8rem;
       height:1.8rem;
-      border:1px solid var(--white);
+      border:0.06rem solid var(--white);
       border-radius:50%;
       display:flex;
       justify-content:center;
       align-items:center;
       text-decoration:none;
-      transition:all 0.3s ease;
       font-size:0.8rem;
       color:var(--white);
       transition: all 0.3s ease;  
@@ -135,35 +143,38 @@ body{
       color:var(--magenta-dark);        
       border-color:var(--magenta-dark); 
    }  
-
+   /* FOOTER */
    footer{
       margin-block-start:1rem;
       font-size:0.7rem;
    }
-
    footer a{
       color:var(--magenta-400);
       text-decoration:none;
       font-weight:var(--fw-600);
    }
-
    footer a:hover,
    footer a:focus-visible{
       color:var(--magenta-dark);
    }
 
+   /* =================================
+        DESKTOP STYLES
+   ================================= */  
    @media screen and (min-width: 48rem) {
       body{
          background-image: url('./images/bg-desktop.svg');
-         background-repeat: no-repeat;
       }
       .container{
-         display:grid;
-         grid-template-columns: 1fr 1fr;
+         display: grid;
          grid-template-areas:
             "header header"
             "mockups content"
-            ' , socials';
+            ' . socials';
+         grid-template-columns: 55% 45%;
+         max-inline-size: 85rem;
+         padding: 2.4rem 2rem;
+         column-gap: 1.8rem;
       }
       .logo-header{
          grid-area: header;
@@ -173,8 +184,40 @@ body{
       }
       .content{
          grid-area: content;
+         margin-block-start:  7.7rem;    
+         max-inline-size:92%;
+         text-align: left;
+         padding-inline: 1.2rem 0;
       }
       .social-icons{
          grid-area: socials;
       }
+      .mockups-section{
+         margin-block-start:4.9rem;
+      }   
+      .content-title{
+         font-size: 2.5rem;
+         padding-inline: 0; 
+      }
+      .content-descpt{
+         margin-block-start:1.4rem;
+         font-size: 1.12rem;
+      }
+      .register-btn{
+         margin-block-start: 1.5rem;
+         padding: 1rem 4rem;
+         font-size: 1.1rem;
+      }
+      .social-icons{
+         display:flex;
+         gap:1rem;
+         margin-block-start:1rem;
+         justify-content: flex-end;
+         padding-inline-end: 2.6rem;
+      }
+      .social-icons a{
+         width:2.4rem;
+         height:2.4rem; 
+         font-size:1.1rem;      
+   }
    }
